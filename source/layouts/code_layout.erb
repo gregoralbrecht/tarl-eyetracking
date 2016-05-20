@@ -5,16 +5,22 @@
     </div>
     <div class="code__meta">
       <div class="meta__type">
-        <p>Frage:</p>
+        <p>Name:</p>
       </div>
       <div class="meta__data">
         <p><%= current_article.title %></p>
       </div>
       <div class="meta__type">
-        <p>Geändert:</p>
+        <p>Changed:</p>
       </div>
       <div class="meta__data">
         <p><%= current_article.date.strftime('%d.%m.%Y') %></p>
+      </div>
+      <div class="meta__type">
+        <p>Discussion:</p>
+      </div>
+      <div class="meta__data">
+        <p><%= link_to 'Issue #' + current_article.data.gh_issue.to_s, 'https://github.com/gregoralbrecht/tarl-eyetracking/issues/' + current_article.data.gh_issue.to_s %></p>
       </div>
     </div>
     <div class="navigation">
