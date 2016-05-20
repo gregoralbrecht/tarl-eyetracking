@@ -14,9 +14,14 @@ page '/*.txt', layout: false
 ###
 
 Time.zone = "Berlin"
+
+# Use kramdown as markdown engine for fenced code blocks
 require 'kramdown'
 activate :syntax, :line_numbers => true
 set :markdown_engine, :kramdown
+
+# # We need this to deploy on github pages
+# set :site_url, ""
 
 activate :blog do |blog|
   blog.name = "code"
@@ -45,6 +50,12 @@ end
 ###
 
 configure :build do
+
+  # We need relative links for gh pages
+  set :http_prefix, '/tarl-eyetracking'
+  set :relative_links, true
+  # activate :relative_assets
+
   # Minify CSS on build
   activate :minify_css
 
@@ -57,8 +68,5 @@ configure :build do
   # Use pretty permalinks
   activate :directory_indexes
 
-  # We need relative links for gh pages
-  set :relative_links, true
-  activate :relative_assets
 end
 

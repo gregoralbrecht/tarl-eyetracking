@@ -6,7 +6,7 @@ title: Home
 
     <ul class="links">
         <li>
-            <a href="#">Github</a>
+            <%= link_to 'Github', 'https://github.com/gregoralbrecht/tarl-eyetracking' %>
         </li>
         <li>
             <a href="#">Survey</a>
@@ -16,7 +16,7 @@ title: Home
     <ul class="all-posts">
         <% blog.articles[0...5].each do |article| %>
             <li>
-                <%= link_to article.title, article.url %>
+                <%= link_to article.title, article.url, :relative => true %>
             </li>
           </article>
         <% end %>
