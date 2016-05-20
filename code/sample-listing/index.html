@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="description" content="Website to host all code snippets used in the eye tracker">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>TARL - Sample Listing</title>
+
+    <link href="../../stylesheets/app-756934e7.css" rel="stylesheet" />
+    <link href="../../stylesheets/syntax-d739a89d.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="../../favicon-32x32-f9fd831f.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../android-chrome-192x192-8f24d5ae.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="../../favicon-96x96-336024a1.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../../favicon-16x16-3f3fd91d.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+      <div class="code__wrap">
+    <div class="code__block">
+      <div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15</pre></td><td class="code"><pre>filter(
+    max(
+        join(
+            match(TP, T1,
+                self    &lt;-  e0  -&gt;  n1,
+                n1      &lt;-  e1  -&gt;  n2
+            ),
+            match(TP, T3,
+                self &lt;- e2 -&gt; n3)
+            ),
+        e0.weight),
+    count(
+        match(TP, T2, self - e3 -&gt; n4)) = 0)
+execute every match:
+    at(self, TP, T2) add neighbor(n1)
+</pre></td></tr></tbody></table>
+</div>
+
+
+    </div>
+    <div class="code__meta">
+      <div class="meta__type">
+        <p>Frage:</p>
+      </div>
+      <div class="meta__data">
+        <p>Sample Listing</p>
+      </div>
+      <div class="meta__type">
+        <p>Geändert:</p>
+      </div>
+      <div class="meta__data">
+        <p>20.05.2016</p>
+      </div>
+    </div>
+    <div class="navigation">
+      <a href="/">Home</a>
+    </div>
+  </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../../javascripts/app-4abf6d7e.js"></script>
+
+  </body>
+</html>
