@@ -33,6 +33,7 @@ end
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  activate :directory_indexes
 end
 
 ###
@@ -55,4 +56,9 @@ configure :build do
 
   # Use pretty permalinks
   activate :directory_indexes
+
+  # We need relative links for gh pages
+  set :relative_links, true
+  activate :relative_assets
 end
+
