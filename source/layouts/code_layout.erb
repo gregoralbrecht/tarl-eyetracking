@@ -1,0 +1,24 @@
+<% wrap_layout :layout do %>
+  <div class="code__wrap">
+    <div class="code__block">
+      <%= yield %>
+    </div>
+    <div class="code__meta">
+      <div class="meta__type">
+        <p>Frage:</p>
+      </div>
+      <div class="meta__data">
+        <p><%= current_article.title %></p>
+      </div>
+      <div class="meta__type">
+        <p>Geändert:</p>
+      </div>
+      <div class="meta__data">
+        <p><%= current_article.date.strftime('%d.%m.%Y') %></p>
+      </div>
+    </div>
+    <div class="navigation">
+      <%= link_to 'Home', '/' %>
+    </div>
+  </div>
+<% end %>

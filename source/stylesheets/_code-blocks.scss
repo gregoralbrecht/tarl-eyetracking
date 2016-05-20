@@ -1,0 +1,41 @@
+$code__width: 600px;
+$code__margin-top: 20px;
+$code__margin-left: 20px;
+$code__background-color: rgba(255, 255, 255, 1.0);
+
+.code__wrap {
+    @include container(100%);
+    margin-bottom: 5em;
+}
+
+.code__block {
+    width: $code__width;
+    margin-top: $code__margin-top;
+    margin-left: $code__margin-left;
+    margin-bottom: 5em;
+
+    .highlight {
+        margin-bottom: 5em;
+    }
+}
+
+.code__meta {
+    @include container(400px);
+    margin-left: $code__margin-left;
+    font-size: 1.1em;
+
+    .meta__type {
+        @include span(50% first);
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .meta__data {
+        @include span(50% last);
+        margin: 0;
+    }
+}
+
+.navigation {
+    padding-left: $code__margin-left;
+}

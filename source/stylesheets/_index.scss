@@ -1,0 +1,27 @@
+$index__padding: 20px;
+
+.page-wrap {
+    padding: 20px;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3em;
+
+    li {
+        display: inline-block;
+
+        & + li {
+            margin-left: 2em;
+        }
+    }
+}
+
+.all-posts {
+    list-style-type: square;
+
+    li {
+        line-height: 2;
+    }
+}
