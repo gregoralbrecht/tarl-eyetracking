@@ -1,0 +1,18 @@
+/**
+ * These styles need to be added to the existing CSS file inside EFS.
+ * Do NOT import this file because this will overwrite the default styles.
+ */
+.frame-wrap {
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+}
+
+.code-frame {
+    position: absolute;
+    top: -22px;
+    left: -22px;
+    width: 800px;
+    height: 100%;
+    border: none;
+}
