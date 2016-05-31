@@ -1,0 +1,102 @@
+---
+title: Sigma.js Test
+---
+<div class="page-wrap">
+    <h1>Graph visualization with Sigma.js <button id="download">Download Graph</button></h1>
+    <div id="graph-container"></div>
+</div>
+
+<style type="text/css">
+    body {
+      margin: 0;
+    }
+    #graph-container {
+      position: absolute;
+      width: 800px;
+      height: 400px;
+    }
+    #downlo
+  </style>
+  <%= javascript_include_tag 'sigma/sigma' %>
+  <%= javascript_include_tag 'sigma/plugins/sigma.renderers.edgeLabels.min' %>
+  <%= javascript_include_tag 'sigma/plugins/sigma.renderers.snapshot.min' %>
+
+
+  <script>
+    // Let's first initialize sigma:
+    var s = new sigma({
+    renderer: {
+        container: "graph-container",
+        type: "canvas"
+    },
+    settings: {
+        defaultLabelSize: '16',
+        defaultEdgeLabelSize: '16',
+        minEdgeSize: '1',
+        maxEdgeSize: '5',
+        minNodeSize: '1',
+        maxNodeSize: '10',
+        enableHovering: false
+    }
+});
+
+    // Then, let's add some data to display:
+    s.graph.addNode({
+      // Main attributes:
+      id: 'n0',
+      label: 'self',
+      // Display attributes:
+      x: 1,
+      y: 1.5,
+      size: 1,
+      color: '#f00'
+    }).addNode({
+      // Main attributes:
+      id: 'n1',
+      label: 'n1',
+      // Display attributes:
+      x: 2,
+      y: 2,
+      size: 1,
+      color: '#00f'
+    }).addNode({
+      // Main attributes:
+      id: 'n2',
+      label: 'n2',
+      // Display attributes:
+      x: 1.8,
+      y: 1.6,
+      size: 1,
+      color: '#00f'
+    }).addEdge({
+      id: 'e0',
+      size: 1,
+      // Reference extremities:
+      source: 'n0',
+      target: 'n1',
+      label: 'e0'
+    }).addEdge({
+      id: 'e1',
+      size: 0.3,
+      // Reference extremities:
+      source: 'n0',
+      target: 'n2',
+      label: 'e1'
+    }).addEdge({
+      id: 'e2',
+      size: 0.3,
+      // Reference extremities:
+      source: 'n2',
+      target: 'n1',
+      label: 'e2'
+    });
+
+    // Finally, let's ask our sigma instance to refresh:
+    s.refresh();
+
+      var button = document.getElementById("download");
+        button.addEventListener("click",function(e){
+            // Download the rendered graph as an image
+            s.renderers[0].snapshot({download: true});
+        },false);
+  </script>
