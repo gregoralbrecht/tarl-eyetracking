@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="description" content="Website to host all code snippets used in the eye tracker">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>TARL - Sigma.js Test</title>
+
+    <link href="/tarl-eyetracking/stylesheets/app-8a3c7cfa.css" rel="stylesheet" />
+    <link href="/tarl-eyetracking/stylesheets/syntax-d739a89d.css" rel="stylesheet" />
+
+    <link href="/tarl-eyetracking/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+
+  <body>
+    <div class="page-wrap">
+    <h1>Graph visualization with Sigma.js <button id="download">Download Graph</button></h1>
+    <div id="graph-container"></div>
+</div>
+
+<style type="text/css">
+    body {
+      margin: 0;
+    }
+    #graph-container {
+      position: absolute;
+      width: 800px;
+      height: 400px;
+    }
+    #downlo
+  </style>
+  <script src="/tarl-eyetracking/javascripts/sigma/sigma-05e0201e.js"></script>
+  <script src="/tarl-eyetracking/javascripts/sigma/plugins/sigma.renderers.edgeLabels.min-4a7a4cf5.js"></script>
+  <script src="/tarl-eyetracking/javascripts/sigma/plugins/sigma.renderers.snapshot.min-8981ddc9.js"></script>
+
+
+  <script>
+    // Let's first initialize sigma:
+    var s = new sigma({
+    renderer: {
+        container: "graph-container",
+        type: "canvas"
+    },
+    settings: {
+        defaultLabelSize: '16',
+        defaultEdgeLabelSize: '16',
+        minEdgeSize: '1',
+        maxEdgeSize: '5',
+        minNodeSize: '1',
+        maxNodeSize: '10',
+        enableHovering: false
+    }
+});
+
+    // Then, let's add some data to display:
+    s.graph.addNode({
+      // Main attributes:
+      id: 'n0',
+      label: 'self',
+      // Display attributes:
+      x: 1,
+      y: 1.5,
+      size: 1,
+      color: '#f00'
+    }).addNode({
+      // Main attributes:
+      id: 'n1',
+      label: 'n1',
+      // Display attributes:
+      x: 2,
+      y: 2,
+      size: 1,
+      color: '#00f'
+    }).addNode({
+      // Main attributes:
+      id: 'n2',
+      label: 'n2',
+      // Display attributes:
+      x: 1.8,
+      y: 1.6,
+      size: 1,
+      color: '#00f'
+    }).addEdge({
+      id: 'e0',
+      size: 1,
+      // Reference extremities:
+      source: 'n0',
+      target: 'n1',
+      label: 'e0'
+    }).addEdge({
+      id: 'e1',
+      size: 0.3,
+      // Reference extremities:
+      source: 'n0',
+      target: 'n2',
+      label: 'e1'
+    }).addEdge({
+      id: 'e2',
+      size: 0.3,
+      // Reference extremities:
+      source: 'n2',
+      target: 'n1',
+      label: 'e2'
+    });
+
+    // Finally, let's ask our sigma instance to refresh:
+    s.refresh();
+
+      var button = document.getElementById("download");
+        button.addEventListener("click",function(e){
+            // Download the rendered graph as an image
+            s.renderers[0].snapshot({download: true});
+        },false);
+  </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/tarl-eyetracking/javascripts/app-4abf6d7e.js"></script>
+
+  </body>
+</html>

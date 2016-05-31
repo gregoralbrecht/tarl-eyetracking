@@ -1,0 +1,36 @@
+<p><a href="https://travis-ci.org/jacomyal/sigma.js"><img src="https://travis-ci.org/jacomyal/sigma.js.svg" alt="Build Status" /></a></p>
+
+<h1 id="sigmajs---v110">sigma.js - v1.1.0</h1>
+
+<p>Sigma is a JavaScript library dedicated to graph drawing, mainly developed by <a href="https://github.com/jacomyal">@jacomyal</a> and <a href="https://github.com/Yomguithereal">@Yomguithereal</a>.</p>
+
+<h3 id="resources">Resources</h3>
+
+<p><a href="http://sigmajs.org">The website</a> provides a global overview of the project, and the documentation is available in the <a href="https://github.com/jacomyal/sigma.js/wiki">Github Wiki</a>.</p>
+
+<p>Also, the <code>plugins</code> and <code>examples</code> directories contain various use-cases that might help you understand how to use sigma.</p>
+
+<h3 id="how-to-use-it">How to use it</h3>
+
+<p>To use it, clone the repository:</p>
+
+<p><code>
+git clone git@github.com:jacomyal/sigma.js.git
+</code></p>
+
+<p>To build the code:</p>
+
+<ul>
+  <li>Install <a href="http://nodejs.org/">Node.js</a>.</li>
+  <li>Install <a href="https://developers.google.com/closure/utilities/docs/linter_howto?hl=en">gjslint</a>.</li>
+  <li>Use <code>npm install</code> to install sigma development dependencies.</li>
+  <li>Use <code>npm run build</code> to minify the code with <a href="https://github.com/mishoo/UglifyJS">Uglify</a>. The minified file <code>sigma.min.js</code> will then be accessible in the <code>build/</code> folder.</li>
+</ul>
+
+<p>Also, you can customize the build by adding or removing files from the <code>coreJsFiles</code> array in <code>Gruntfile.js</code> before applying the grunt task.</p>
+
+<h3 id="contributing">Contributing</h3>
+
+<p>You can contribute by submitting <a href="http://github.com/jacomyal/sigma.js/issues">issues tickets</a> and proposing <a href="http://github.com/jacomyal/sigma.js/pulls">pull requests</a>. Make sure that tests and linting pass before submitting any pull request by running the command <code>grunt</code>.</p>
+
+<p>The whole source code is validated by the <a href="https://developers.google.com/closure/utilities/">Google Closure Linter</a> and <a href="http://www.jshint.com/">JSHint</a>, and the comments are written in <a href="http://en.wikipedia.org/wiki/JSDoc">JSDoc</a> (tags description is available <a href="https://developers.google.com/closure/compiler/docs/js-for-compiler">here</a>).</p>
