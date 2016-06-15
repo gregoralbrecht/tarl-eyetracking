@@ -27,10 +27,9 @@
     }
     #graph-container {
       position: absolute;
-      width: 800px;
-      height: 400px;
+      width: 400px;
+      height: 300px;
     }
-    #downlo
   </style>
   <script src="/tarl-eyetracking/javascripts/sigma/sigma-05e0201e.js"></script>
   <script src="/tarl-eyetracking/javascripts/sigma/plugins/sigma.renderers.edgeLabels.min-4a7a4cf5.js"></script>
@@ -45,8 +44,8 @@
         type: "canvas"
     },
     settings: {
-        defaultLabelSize: '16',
-        defaultEdgeLabelSize: '16',
+        // defaultLabelSize: '16',
+        // defaultEdgeLabelSize: '16',
         minEdgeSize: '1',
         maxEdgeSize: '5',
         minNodeSize: '1',
@@ -61,49 +60,66 @@
       id: 'n0',
       label: 'self',
       // Display attributes:
-      x: 1,
+      x: 1.5,
       y: 1.5,
       size: 1,
-      color: '#f00'
+      color: '#00f'
     }).addNode({
       // Main attributes:
       id: 'n1',
-      label: 'n1',
+      // label: 'n1',
       // Display attributes:
       x: 2,
-      y: 2,
+      y: 1.5,
       size: 1,
-      color: '#00f'
+      color: '#aaa'
+    }).addNode({
+      // Main attributes:
+      id: 'n3',
+      label: 'n2',
+      // Display attributes:
+      x: 1.25,
+      y: 1,
+      size: 1,
+      color: '#aaa'
     }).addNode({
       // Main attributes:
       id: 'n2',
-      label: 'n2',
+      label: 'n1',
       // Display attributes:
-      x: 1.8,
-      y: 1.6,
+      x: 1.75,
+      y: 1,
       size: 1,
-      color: '#00f'
+      color: '#aaa'
     }).addEdge({
       id: 'e0',
       size: 1,
       // Reference extremities:
-      source: 'n0',
-      target: 'n1',
-      label: 'e0'
+      source: 'n1',
+      target: 'n0',
+      // label: 'e0'
     }).addEdge({
       id: 'e1',
-      size: 0.3,
-      // Reference extremities:
-      source: 'n0',
-      target: 'n2',
-      label: 'e1'
-    }).addEdge({
-      id: 'e2',
-      size: 0.3,
+      size: 1,
       // Reference extremities:
       source: 'n2',
-      target: 'n1',
-      label: 'e2'
+      target: 'n0',
+      label: 'e0'
+    }).addEdge({
+      id: 'e2',
+      size: 1,
+      // Reference extremities:
+      source: 'n3',
+      target: 'n2',
+      label: 'e1'
+    })
+    .addEdge({
+      id: 'e3',
+      size: 1,
+      // Reference extremities:
+      source: 'n3',
+      target: 'n0',
+      // label: 'e0'
     });
 
     // Finally, let's ask our sigma instance to refresh:
