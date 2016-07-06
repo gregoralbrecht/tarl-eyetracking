@@ -1,0 +1,13 @@
+---
+title: S_3
+date: 2016-05-20 12:23 CEST
+tags:
+gh_issue: 5
+---
+
+# Open questions
+### "Now we need some last information about you."
+- How old are you?
+- What semester are you in?
+- Did you encounter any difficulties using TARL?
+- Did you encounter any difficulties using Java?
