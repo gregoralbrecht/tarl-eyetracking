@@ -14,7 +14,7 @@ title: Home
     </ul>
     <h3>All code snippets</h3>
     <ul class="all-posts">
-        <% blog.articles[0...5].each do |article| %>
+        <% blog.articles[0...50].each do |article| %>
             <li>
                 <%= link_to article.title, article.url, :relative => true %>
             </li>

@@ -5,9 +5,12 @@ tags:
 gh_issue: 2
 ---
 
-# Scale: not at all ---- very much
-## randomized
-### "Please tell us about your experience with TARL."
+# "Please tell us about your experience with TARL."
+_Scale: not at all ---- very much_
+
+_randomized with S_1J_
+
+
 - How apparent did you find the structure of a TARL rule?
 - How difficult was it to solve the tasks?
 - How obvious did you find the syntax of TARL?

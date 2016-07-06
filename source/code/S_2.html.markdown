@@ -5,16 +5,17 @@ tags:
 gh_issue: 4
 ---
 
-# Scale: Java ---- TARL
-## 7 steps
-### "Now we would like to know how you would compare Java and TARL."
+# "Now we would like to know how you would compare Java and TARL."
+_Scale: Java ---- TARL_
+
 - Which one do you think is easier to understand for a novice?
 - Which one is easier to understand for you?
 - Which one do you like more?
 
 
-# Scale: no experience ---- a lot of experience 
-## 7 steps
-### "Please tell us about your previous programming experience."
+# "Please tell us about your previous programming experience."
+_Scale: no experience ---- a lot of experience_
+
+
 - Do you have any previous experience programming in the following languages?
 - Java, C++, PHP, Javascript

@@ -1,13 +1,16 @@
 ---
-title: S_1T
+title: S_1J
 date: 2016-05-20 12:23 CEST
 tags:
 gh_issue: 2
 ---
 
-# Scale: not at all ---- very much
-## randomized
-### "Please tell us about your experience with Java."
+# "Please tell us about your experience with Java."
+_Scale: not at all ---- very much_
+
+_randomized with S_1T_
+
+
 - How apparent did you find the structure of a Java rule?
 - How difficult was it to solve the tasks?
 - How obvious did you find the syntax of Java?
