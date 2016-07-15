@@ -27,15 +27,13 @@
 7
 8
 9
-10
-11</pre></td><td class="code"><pre>filter(
-    max(
-        join(
-            match(T1, 
-                self - e0 - n1,
-                self - e1 - n2),
-            match(T2,
-                self - e2 - n3)),
+10</pre></td><td class="code"><pre>max(
+    join(
+        match(T1, 
+            self - e0 - n1,
+            self - e1 - n2),
+        match(T2,
+            self - e2 - n3)),
     e1.weight)
 execute every match:
     at(n2, T1) add neighbor(n3)

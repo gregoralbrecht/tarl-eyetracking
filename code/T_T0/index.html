@@ -7,7 +7,7 @@
     <meta name="description" content="Website to host all code snippets used in the eye tracker">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>TARL - T_T4a</title>
+    <title>TARL - T_T0</title>
 
     <link href="/tarl-eyetracking/stylesheets/app-0f7a52df.css" rel="stylesheet" />
     <link href="/tarl-eyetracking/stylesheets/syntax-d739a89d.css" rel="stylesheet" />
@@ -22,15 +22,11 @@
 2
 3
 4
-5
-6
-7</pre></td><td class="code"><pre>filter(
-    match(T1, 
-        self - e0 - n1,
-        n1 - e1 - n2),
-    e1.weight &lt; 8 )
+5</pre></td><td class="code"><pre>match(T1, 
+    self - e0 - n1,
+    self - e1 - n2)
 execute every match:
-    at(self, T1) remove neighbor(n1)
+    at(n1, T1) add neighbor(n2)
 </pre></td></tr></tbody></table>
 </div>
 
@@ -41,7 +37,7 @@ execute every match:
         <p>Name:</p>
       </div>
       <div class="meta__data">
-        <p>T_T4a</p>
+        <p>T_T0</p>
       </div>
       <div class="meta__type">
         <p>Changed:</p>
@@ -53,7 +49,7 @@ execute every match:
         <p>Discussion:</p>
       </div>
       <div class="meta__data">
-        <p><a href="https://github.com/gregoralbrecht/tarl-eyetracking/issues/10">Issue #10</a></p>
+        <p><a href="https://github.com/gregoralbrecht/tarl-eyetracking/issues/13">Issue #13</a></p>
       </div>
     </div>
     <div class="navigation">
