@@ -5,14 +5,13 @@ tags:
 gh_issue: 11
 ---
 ~~~
-filter(
-    min(
-        join(
-            match(T1, 
-                self - e0 - n1),
-            match(T2,
-                self - e1 - n2)),
-        e0.weight)
+min(
+    join(
+        match(T1, 
+            self - e0 - n1),
+        match(T2,
+            self - e1 - n2)),
+    e0.weight)
 execute every match:
     at(n1, T1) add neighbor(n2)
 ~~~

@@ -10,6 +10,8 @@ _Scale: Java ---- TARL_
 
 - Which one do you think is easier to understand for a novice?
 - Which one is easier to understand for you?
+- Which one do you think is easier to write for a novice?
+- Which one is easier to write for you?
 - Which one do you like more?
 
 

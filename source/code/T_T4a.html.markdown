@@ -1,16 +1,16 @@
 ---
-title: T_T2a
+title: T_T4a
 date: 2016-05-20 12:23 CEST
 tags:
-gh_issue: 8
+gh_issue: 10
 ---
 ~~~
-max(
+filter(
     match(T1, 
         self - e0 - n1,
         n1 - e1 - n2),
-    e0.weight)
+    e1.weight < 8 )
 execute every match:
-    at(self, T1) remove neighbor(n1),
+    at(self, T1) remove neighbor(n1)
 ~~~
 
