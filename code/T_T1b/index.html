@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="description" content="Website to host all code snippets used in the eye tracker">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>TARL - T_T1b</title>
+
+    <link href="/tarl-eyetracking/stylesheets/app-0f7a52df.css" rel="stylesheet" />
+    <link href="/tarl-eyetracking/stylesheets/syntax-d739a89d.css" rel="stylesheet" />
+
+    <link href="/tarl-eyetracking/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+
+  <body>
+      <div class="code__wrap">
+    <div class="code__block">
+      <div class="highlight plaintext"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre>filter(
+    match(T1,
+        self - e0 - n1,
+        n1 - e1 - n2,
+        n2 - e2 - n3))
+execute every match:
+    at(self, T1) add neighbor(n2),
+    at(n3, T1) add neighbor(self)
+</pre></td></tr></tbody></table>
+</div>
+
+
+    </div>
+    <div class="code__meta">
+      <div class="meta__type">
+        <p>Name:</p>
+      </div>
+      <div class="meta__data">
+        <p>T_T1b</p>
+      </div>
+      <div class="meta__type">
+        <p>Changed:</p>
+      </div>
+      <div class="meta__data">
+        <p>20.05.2016</p>
+      </div>
+      <div class="meta__type">
+        <p>Discussion:</p>
+      </div>
+      <div class="meta__data">
+        <p><a href="https://github.com/gregoralbrecht/tarl-eyetracking/issues/17">Issue #17</a></p>
+      </div>
+    </div>
+    <div class="navigation">
+      <a href="/tarl-eyetracking">Home</a>
+    </div>
+  </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/tarl-eyetracking/javascripts/app-4abf6d7e.js"></script>
+
+  </body>
+</html>
