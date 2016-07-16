@@ -1,8 +1,8 @@
 ---
-title: T_J1b
+title: T_J1a
 date: 2016-05-20 12:23 CEST
 tags:
-gh_issue: 14
+gh_issue: 1
 ---
 ~~~
 public void modifyGraph(Graph graphToModify) {

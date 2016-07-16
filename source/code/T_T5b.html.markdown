@@ -6,14 +6,14 @@ gh_issue: 20
 ---
 ~~~
 filter(
-    max(
+    min(
         match(T1, 
             self - e0 - n1,
             n1 - e1 - n2,
             n2 - e3 - self),
-        e1.weight),
-    e0.weight < 5 )
+        e0.weight),
+    e1.weight < 8 )
 execute every match:
-    at(n1, T1) remove neighbor(self)
+    at(self, T1) remove neighbor(n2)
 ~~~
 
