@@ -14,4 +14,4 @@ Project to host all code samples used for the TARL eye tracking study
 
 ## Images for the survey
 To resize the images to match the survey, simply run
-`mogrify -resize 220x220 -quality 100 -path small *.PNG` inside a directory with graph images.
+` mogrify -path small -format png -resize 214x214 -quality 100 -bordercolor "#b6b6b6" -border 3x3 *.PNG` inside a directory with graph images.
