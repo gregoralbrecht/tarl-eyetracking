@@ -5,10 +5,12 @@ tags:
 gh_issue: 1
 ---
 ~~~
-public void modifyGraph(Graph graphToModify) {
-    Node n1 = graphToModify.getSelf().getNeighbors()[0];
-    Node n2 = graphToModify.getSelf().getNeighbors()[1];
-    n1.addNeighbor(n2);
+for (Node neighbor: graph.getSelf().getNeighbors()) {
+    for (Node otherNeighbor: graph.getSelf().getNeighbors()) {
+        if(!neighbor.equals(otherNeighbor)) {
+            graph.addEdge(neighbor, otherNeighbor);
+        }
+    }
 }
 ~~~
 

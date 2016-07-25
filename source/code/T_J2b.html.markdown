@@ -5,16 +5,14 @@ tags:
 gh_issue: 16
 ---
 ~~~
-public void modifyGraph(Graph graphToModify) {
-    Node highestWeightNeighbor = null;
-    for(Node neighbor:graphToModify.getSelf().getNeighbors()) {
-        if(neighbor.getNeighbors().length > 0) {
-            if(graphToModify.getSelf().getEdgeWeight(neighbor) > graphToModify.getSelf().getEdgeWeight(highestWeightNeighbor)) {
-                highestWeightNeighbor = neighbor;
-            }
-        }
+Edge highestWeightEdge = null; 
+for (Edge adjacentEdge: graph.getSelf().getEdges()) {
+    if((highestWeightEdge == null 
+            || adjacentEdge.getWeight() > highestWeightEdge.getWeight()) 
+            && adjacentEdge.getNeighbor(graph.getSelf()).getEdgeCount() > 1) {
+        highestWeightEdge = adjacentEdge;
     }
-    graphToModify.getSelf().removeNeighbor(highestWeightNeighbor);
 }
+graph.removeEdge(highestWeightEdge);
 ~~~
 

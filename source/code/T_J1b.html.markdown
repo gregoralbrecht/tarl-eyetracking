@@ -5,14 +5,12 @@ tags:
 gh_issue: 1
 ---
 ~~~
-public void modifyGraph(Graph graphToModify) {
-    for(Node neighbor:graphToModify.getSelf().getNeighbors()) {
-        for(Node neighborNeighbor:neighbor.getNeighbors()) {
-            if(neighborNeighbor != graphToModify.getSelf()) {
-                if(!neighbor.isConnected(neighborNeighbor)) {
-                    neighbor.addNeighbor(neighborNeighbor);
-                }
-                graphToModify.getSelf().addNeighbor(neighborNeighbor);
+for (Node neighbor: graph.getSelf().getNeighbors()) {
+    for (Node neighborNeighbor: neighbor.getNeighbors()) {
+        if(!neighborNeighbor.equals(graph.getSelf())) {
+            graph.addEdge(graph.getSelf(), neighborNeighbor);
+            for(Node otherNeighbor: graph.getSelf().getNeighbors()) { 
+                graph.addEdge(otherNeighbor, neighborNeighbor);
             }
         }
     }
