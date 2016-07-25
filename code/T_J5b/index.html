@@ -29,10 +29,7 @@
 9
 10
 11
-12
-13
-14
-15</pre></td><td class="code"><pre>Edge highestWeightEdge = null;
+12</pre></td><td class="code"><pre>Edge highestWeightEdge = null;
 Node wantedNeighbor = null;
 for (Node neighbor: graph.getSelf().getNeighbors()) {
     for (Edge neighborEdge: neighbor.getEdges()) {
@@ -42,10 +39,7 @@ for (Node neighbor: graph.getSelf().getNeighbors()) {
             if(graph.findEdge(graph.getSelf(), neighbor).getWeight() &lt; 5) {
                 highestWeightEdge = neighborEdge;
                 wantedNeighbor = neighbor;
-            }
-        }
-    }
-}
+            }}}}
 graph.removeEdge(graph.findEdge(graph.getSelf(), wantedNeighbor));
 </pre></td></tr></tbody></table>
 </div>
