@@ -10,7 +10,7 @@ filter(
         match(T1, 
             self - e0 - n1,
             n1 - e1 - n2,
-            n2 - e3 - self),
+            n2 - e2 - self),
         e0.weight),
     e1.weight < 8 )
 execute every match:

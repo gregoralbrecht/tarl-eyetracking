@@ -5,10 +5,10 @@ tags:
 gh_issue: 1
 ---
 ~~~
-for (Node neighbor: graph.getSelf().getNeighbors()) {
-    for (Node otherNeighbor: graph.getSelf().getNeighbors()) {
-        if(!neighbor.equals(otherNeighbor)) {
-            graph.addEdge(neighbor, otherNeighbor);
+for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Node n2: graph.getSelf().getNeighbors()) {
+        if(!n1.equals(n2)) {
+            graph.addEdge(n1, n2);
         }
     }
 }

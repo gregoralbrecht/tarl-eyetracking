@@ -5,14 +5,14 @@ tags:
 gh_issue: 16
 ---
 ~~~
-Edge highestWeightEdge = null; 
-for (Edge adjacentEdge: graph.getSelf().getEdges()) {
-    if((highestWeightEdge == null 
-            || adjacentEdge.getWeight() > highestWeightEdge.getWeight()) 
-            && adjacentEdge.getNeighbor(graph.getSelf()).getEdgeCount() > 1) {
-        highestWeightEdge = adjacentEdge;
+Edge highestWeightE0 = null; 
+for (Edge e0: graph.getSelf().getEdges()) {
+    if((highestWeightE0 == null 
+            || e0.getWeight() > highestWeightE0.getWeight()) 
+            && e0.getNeighbor(graph.getSelf()).getEdgeCount() > 1) {
+        highestWeightE0 = e0;
     }
 }
-graph.removeEdge(highestWeightEdge);
+graph.removeEdge(highestWeightE0);
 ~~~
 

@@ -5,20 +5,20 @@ tags:
 gh_issue: 1
 ---
 ~~~
-Edge highestWeightEdge = null;
-Node wantedNeighbor = null;
-for (Node neighbor: graph.getSelf().getNeighbors()) {
-    for (Edge neighborEdge: neighbor.getEdges()) {
-        if(neighborEdge.getNeighbor(neighbor) != graph.getSelf() 
-                && (highestWeightEdge == null || neighborEdge.getWeight() > highestWeightEdge.getWeight())
+Edge highestWeightE1 = null;
+Node wantedN1 = null;
+for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Edge e1: n1.getEdges()) {
+        if(e1.getNeighbor(n1) != graph.getSelf() 
+                && (highestWeightE1 == null || e1.getWeight() > highestWeightE1.getWeight())
                 ) {
-            if(graph.findEdge(graph.getSelf(), neighbor).getWeight() < 5) {
-                highestWeightEdge = neighborEdge;
-                wantedNeighbor = neighbor;
+            if(graph.findEdge(graph.getSelf(), n1).getWeight() < 5) {
+                highestWeightE1 = e1;
+                wantedN1 = n1;
             }
         }
     }
 }
-graph.removeEdge(graph.findEdge(graph.getSelf(), wantedNeighbor));
+graph.removeEdge(graph.findEdge(graph.getSelf(), wantedN1));
 ~~~
 

@@ -5,10 +5,10 @@ tags:
 gh_issue: 1
 ---
 ~~~
-for (Node neighbor: graph.getSelf().getNeighbors()) {
-    for (Edge neighborEdge: neighbor.getEdges()) {
-        if(neighborEdge.getWeight() < 8 && neighborEdge.getNeighbor(neighbor) != graph.getSelf()) {
-            graph.removeEdge(graph.findEdge(graph.getSelf(), neighbor));
+for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Edge e1: n1.getEdges()) {
+        if(e1.getWeight() < 8 && e1.getNeighbor(n1) != graph.getSelf()) {
+            graph.removeEdge(graph.findEdge(graph.getSelf(), n1));
         }
     }
 }
