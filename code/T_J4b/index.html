@@ -24,10 +24,10 @@
 4
 5
 6
-7</pre></td><td class="code"><pre>for (Node neighbor: graph.getSelf().getNeighbors()) {
-    for (Edge neighborEdge: neighbor.getEdges()) {
-        if(neighborEdge.getWeight() &lt; 8 &amp;&amp; neighborEdge.getNeighbor(neighbor) != graph.getSelf()) {
-            graph.removeEdge(graph.findEdge(graph.getSelf(), neighbor));
+7</pre></td><td class="code"><pre>for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Edge e1: n1.getEdges()) {
+        if(e1.getWeight() &lt; 8 &amp;&amp; e1.getNeighbor(n1) != graph.getSelf()) {
+            graph.removeEdge(graph.findEdge(graph.getSelf(), n1));
         }
     }
 }

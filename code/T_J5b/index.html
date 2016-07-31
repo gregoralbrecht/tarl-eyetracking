@@ -29,18 +29,24 @@
 9
 10
 11
-12</pre></td><td class="code"><pre>Edge highestWeightEdge = null;
-Node wantedNeighbor = null;
-for (Node neighbor: graph.getSelf().getNeighbors()) {
-    for (Edge neighborEdge: neighbor.getEdges()) {
-        if(neighborEdge.getNeighbor(neighbor) != graph.getSelf() 
-                &amp;&amp; (highestWeightEdge == null || neighborEdge.getWeight() &gt; highestWeightEdge.getWeight())
+12
+13
+14
+15</pre></td><td class="code"><pre>Edge highestWeightE1 = null;
+Node wantedN1 = null;
+for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Edge e1: n1.getEdges()) {
+        if(e1.getNeighbor(n1) != graph.getSelf() 
+                &amp;&amp; (highestWeightE1 == null || e1.getWeight() &gt; highestWeightE1.getWeight())
                 ) {
-            if(graph.findEdge(graph.getSelf(), neighbor).getWeight() &lt; 5) {
-                highestWeightEdge = neighborEdge;
-                wantedNeighbor = neighbor;
-            }}}}
-graph.removeEdge(graph.findEdge(graph.getSelf(), wantedNeighbor));
+            if(graph.findEdge(graph.getSelf(), n1).getWeight() &lt; 5) {
+                highestWeightE1 = e1;
+                wantedN1 = n1;
+            }
+        }
+    }
+}
+graph.removeEdge(graph.findEdge(graph.getSelf(), wantedN1));
 </pre></td></tr></tbody></table>
 </div>
 

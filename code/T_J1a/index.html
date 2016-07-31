@@ -27,13 +27,19 @@
 7
 8
 9
-10</pre></td><td class="code"><pre>public void modifyGraph(Graph graphToModify) {
-    for(Node neighbor:graphToModify.getSelf().getNeighbors()) {
-        for(Node neighborNeighbor:neighbor.getNeighbors()) {
-            for(Node neighborNeighborNeighbor:neighborNeighbor.getNeighbors()) {
-                graphToModify.getSelf().addNeighbor(neighborNeighborNeighbor);
+10
+11
+12
+13</pre></td><td class="code"><pre>for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Node n2: n1.getNeighbors()) {
+        if(!n2.equals(graph.getSelf())) {
+            graph.addEdge(graph.getSelf(), n2);
+        }
+        
+        for (Node n3: n2.getNeighbors()) {
+            if(!n3.equals(n2)) {
+                graph.addEdge(graph.getSelf(), n3);
             }
-            graphToModify.getSelf().addNeighbor(neighborNeighbor);
         }
     }
 }
@@ -59,7 +65,7 @@
         <p>Discussion:</p>
       </div>
       <div class="meta__data">
-        <p><a href="https://github.com/gregoralbrecht/tarl-eyetracking/issues/21">Issue #21</a></p>
+        <p><a href="https://github.com/gregoralbrecht/tarl-eyetracking/issues/1">Issue #1</a></p>
       </div>
     </div>
     <div class="navigation">

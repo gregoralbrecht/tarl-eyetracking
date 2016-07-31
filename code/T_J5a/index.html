@@ -7,7 +7,7 @@
     <meta name="description" content="Website to host all code snippets used in the eye tracker">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>TARL - T_J1b</title>
+    <title>TARL - T_J5a</title>
 
     <link href="/tarl-eyetracking/stylesheets/app-6643dcbf.css" rel="stylesheet" />
     <link href="/tarl-eyetracking/stylesheets/syntax-d739a89d.css" rel="stylesheet" />
@@ -27,19 +27,30 @@
 7
 8
 9
-10</pre></td><td class="code"><pre>for (Node n1: graph.getSelf().getNeighbors()) {
-    for (Node n2: n1.getNeighbors()) {
-        if(!n2.equals(graph.getSelf())) {
-            graph.addEdge(graph.getSelf(), n2);
-            for(Node n3: graph.getSelf().getNeighbors()) { 
-                graph.addEdge(n2, n3);
+10
+11
+12
+13
+14
+15
+16</pre></td><td class="code"><pre>Edge lowestWeightE0 = null;
+Node wantedN2 = null;
+for (Node n1: graph.getSelf().getNeighbors()) {
+    for (Edge e1: n1.getEdges()) {
+        Node n2 = e1.getNeighbor(n1);
+        if(!n2.equals(graph.getSelf())
+                &amp;&amp; (lowestWeightE0 == null || e1.getWeight() &lt; lowestWeightE0.getWeight())
+                ) {
+            if(graph.findEdge(graph.getSelf(), n2).getWeight() &lt; 8) {
+                lowestWeightE0 = e1;
+                wantedN2 = n2;
             }
         }
     }
 }
+graph.removeEdge(graph.findEdge(graph.getSelf(), wantedN2));
 </pre></td></tr></tbody></table>
 </div>
-
 
     </div>
     <div class="code__meta">
@@ -47,7 +58,7 @@
         <p>Name:</p>
       </div>
       <div class="meta__data">
-        <p>T_J1b</p>
+        <p>T_J5a</p>
       </div>
       <div class="meta__type">
         <p>Changed:</p>

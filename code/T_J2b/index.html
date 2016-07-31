@@ -26,15 +26,15 @@
 6
 7
 8
-9</pre></td><td class="code"><pre>Edge highestWeightEdge = null; 
-for (Edge adjacentEdge: graph.getSelf().getEdges()) {
-    if((highestWeightEdge == null 
-            || adjacentEdge.getWeight() &gt; highestWeightEdge.getWeight()) 
-            &amp;&amp; adjacentEdge.getNeighbor(graph.getSelf()).getEdgeCount() &gt; 1) {
-        highestWeightEdge = adjacentEdge;
+9</pre></td><td class="code"><pre>Edge highestWeightE0 = null; 
+for (Edge e0: graph.getSelf().getEdges()) {
+    if((highestWeightE0 == null 
+            || e0.getWeight() &gt; highestWeightE0.getWeight()) 
+            &amp;&amp; e0.getNeighbor(graph.getSelf()).getEdgeCount() &gt; 1) {
+        highestWeightE0 = e0;
     }
 }
-graph.removeEdge(highestWeightEdge);
+graph.removeEdge(highestWeightE0);
 </pre></td></tr></tbody></table>
 </div>
 
