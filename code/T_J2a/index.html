@@ -31,13 +31,15 @@
 11
 12
 13
-14</pre></td><td class="code"><pre>Edge lowestWeightE1 = null;
+14
+15</pre></td><td class="code"><pre>Edge lowestWeightE1 = null;
 Node wantedN1 = null;
 for (Node n1: graph.getSelf().getNeighbors()) {
     for (Edge e1: n1.getEdges()) {
         if (!e1.getNeighbor(n1).equals(graph.getSelf())) {
             if (lowestWeightE1 == null 
-                    || e1.getWeight() &lt; lowestWeightE1.getWeight()) {
+                    || e1.getWeight() &lt; 
+                    lowestWeightE1.getWeight()) {
                 lowestWeightE1 = e1;
                 wantedN1 = n1;
             }
