@@ -32,21 +32,23 @@
 12
 13
 14
-15</pre></td><td class="code"><pre>Edge highestWeightE1 = null;
-Node wantedN1 = null;
+15
+16</pre></td><td class="code"><pre>Edge lowestWeightE0 = null;
+Node wantedN2 = null;
 for (Node n1: graph.getSelf().getNeighbors()) {
     for (Edge e1: n1.getEdges()) {
-        if(e1.getNeighbor(n1) != graph.getSelf() 
-                &amp;&amp; (highestWeightE1 == null || e1.getWeight() &gt; highestWeightE1.getWeight())
+        Node n2 = e1.getNeighbor(n1);
+        if(!n2.equals(graph.getSelf())
+                &amp;&amp; (lowestWeightE0 == null || e1.getWeight() &lt; lowestWeightE0.getWeight())
                 ) {
-            if(graph.findEdge(graph.getSelf(), n1).getWeight() &lt; 5) {
-                highestWeightE1 = e1;
-                wantedN1 = n1;
+            if(graph.findEdge(graph.getSelf(), n2).getWeight() &lt; 8) {
+                lowestWeightE0 = e1;
+                wantedN2 = n2;
             }
         }
     }
 }
-graph.removeEdge(graph.findEdge(graph.getSelf(), wantedN1));
+graph.removeEdge(graph.findEdge(graph.getSelf(), wantedN2));
 </pre></td></tr></tbody></table>
 </div>
 
