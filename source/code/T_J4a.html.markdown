@@ -10,7 +10,9 @@ for (Edge e0: graph.getSelf().getEdges()) {
         Node n1 = e0.getNeighbor(graph.getSelf()); 
         for (Node n2: n1.getNeighbors()) {
             if (!n2.equals(graph.getSelf())) {
-                graph.removeEdge(graph.findEdge(graph.getSelf(), n2));
+                graph.removeEdge(
+                    graph.findEdge(graph.getSelf(), n2)
+                );
             }
         }
     }
