@@ -27,12 +27,16 @@
 7
 8
 9
-10</pre></td><td class="code"><pre>for (Edge e0: graph.getSelf().getEdges()) {
+10
+11
+12</pre></td><td class="code"><pre>for (Edge e0: graph.getSelf().getEdges()) {
     if(e0.getWeight() &gt; 3) {
         Node n1 = e0.getNeighbor(graph.getSelf()); 
         for (Node n2: n1.getNeighbors()) {
             if (!n2.equals(graph.getSelf())) {
-                graph.removeEdge(graph.findEdge(graph.getSelf(), n2));
+                graph.removeEdge(
+                    graph.findEdge(graph.getSelf(), n2)
+                );
             }
         }
     }
