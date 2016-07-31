@@ -43,8 +43,8 @@ for (Node n1: graph.getSelf().getNeighbors()) {
     for (Edge e1: n1.getEdges()) {
         Node n2 = e1.getNeighbor(n1);
         if(!n2.equals(graph.getSelf())
-                &amp;&amp; (lowestWeightE0 == null 
-                || e1.getWeight() &lt; lowestWeightE0.getWeight()
+                &amp;&amp; (lowestWeightE0 == null || 
+                e1.getWeight() &lt; lowestWeightE0.getWeight()
                 )
         ) {
             if(graph.findEdge(
