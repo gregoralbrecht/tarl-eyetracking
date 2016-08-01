@@ -32,24 +32,14 @@
 12
 13
 14
-15
-16
-17
-18
-19
-20</pre></td><td class="code"><pre>Edge lowestWeightE0 = null;
+15</pre></td><td class="code"><pre>Edge lowestWeightE0 = null;
 Node wantedN2 = null;
 for (Node n1: graph.getSelf().getNeighbors()) {
     for (Edge e1: n1.getEdges()) {
         Node n2 = e1.getNeighbor(n1);
-        if(!n2.equals(graph.getSelf())
-                &amp;&amp; (lowestWeightE0 == null || 
-                e1.getWeight() &lt; lowestWeightE0.getWeight()
-                )
-        ) {
-            if(graph.findEdge(
-                graph.getSelf(), n2).getWeight() &lt; 8
-            ) {
+        if(!n2.equals(graph.getSelf()) &amp;&amp; (lowestWeightE0 == null ||
+        e1.getWeight() &lt;  lowestWeightE0.getWeight())) {
+            if(graph.findEdge(graph.getSelf(), n2).getWeight() &lt; 8) {
                 lowestWeightE0 = e1;
                 wantedN2 = n2;
             }
