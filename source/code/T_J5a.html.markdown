@@ -10,14 +10,9 @@ Node wantedN2 = null;
 for (Node n1: graph.getSelf().getNeighbors()) {
     for (Edge e1: n1.getEdges()) {
         Node n2 = e1.getNeighbor(n1);
-        if(!n2.equals(graph.getSelf())
-                && (lowestWeightE0 == null || 
-                e1.getWeight() < lowestWeightE0.getWeight()
-                )
-        ) {
-            if(graph.findEdge(
-                graph.getSelf(), n2).getWeight() < 8
-            ) {
+        if(!n2.equals(graph.getSelf()) && (lowestWeightE0 == null ||
+        e1.getWeight() <  lowestWeightE0.getWeight())) {
+            if(graph.findEdge(graph.getSelf(), n2).getWeight() < 8) {
                 lowestWeightE0 = e1;
                 wantedN2 = n2;
             }
