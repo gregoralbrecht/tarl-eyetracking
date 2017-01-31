@@ -12,7 +12,7 @@ for (Node n1: graph.getSelf().getNeighbors()) {
         }
         
         for (Node n3: n2.getNeighbors()) {
-            if(!n3.equals(n2)) {
+            if(!n3.equals(graph.getSelf())) {
                 graph.addEdge(graph.getSelf(), n3);
             }
         }

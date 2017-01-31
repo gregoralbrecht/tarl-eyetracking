@@ -16,7 +16,7 @@ for (Edge e0: graph1.getSelf().getEdges()) {
     }
 }
 for (Node n2: graph2.getSelf().getNeighbors()) {
-    graph1.addNode(n2, false);
+    graph1.addNode(n2);
     graph1.addEdge(n2, wantedN1);
 }
 ~~~
